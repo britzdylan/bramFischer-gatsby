@@ -1,17 +1,23 @@
 import { Link } from "gatsby"
 import React from "react"
+import footerStyles from "../components/footer.module.css"
+
 
 const FooterLease = () => {
     return (
         <footer>
-            <div className="footer-info" >
-                <div className="google-maps" id="map">
+            <div className={footerStyles.footerInfo} >
+                    {/* google maps */}
+                    <div className={footerStyles.map} id="map">
                 
+                     </div>
                 </div>
-            </div>
-            <div className="footer-nav">
+                
+                
+            {/* copyright info and extra links */}
+            <div className={footerStyles.footerNav}>
                 <small>
-                Copyright All Rights Reserved Netwater Properties PTY (Ltd). Design by Blak Studios
+                Copyright All Rights Reserved Netwater Properties PTY (Ltd).
                 </small>
                 <nav>
                     <small><Link to="privacy-policy" className="wht">Privacy Policy</Link></small>

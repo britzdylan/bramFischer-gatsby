@@ -1,0 +1,97 @@
+.about {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 16px;
+    grid-row-gap: 64px;
+    grid-template-rows: auto auto auto;
+    list-style: none;
+    padding: 0;
+    margin: 160px 0;
+}
+
+.lease {
+    margin: 160px auto;
+    border-radius: 8px;
+    background-color: #548F6C;
+    padding: 80px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lease > h4 {
+    margin: 0;
+    line-height: 1;
+    max-width: 70%;
+}
+
+.h2 {
+    text-align: center;
+    margin-top: 160px;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .h2 {
+        font-size: 1.8rem;
+        margin-top: 80px;
+    }
+
+    .img {
+        height: 45px;
+        width: 45px;
+    }
+    
+    .about {
+        grid-template-columns: auto;
+        grid-column-gap: 16px;
+        grid-row-gap: 16px;
+        margin: 64px 0;
+    }
+    .lease {
+        display: block;
+        padding: 40px 20px;
+        margin: 80px auto;
+    }
+
+   
+
+    .lease > h4 {
+        margin-bottom: 32px;
+        font-size: 1.3rem;
+        max-width: 100%;
+    }
+    
+
+}
+
+@media only screen and (min-width: 600px) { 
+
+    .lease > h4 {
+        max-width: 100%;
+        font-size: 1.3rem;
+        margin-bottom: 32px;
+    }
+
+    .lease {
+        display: block;
+        padding: 40px 20px;
+        margin: 80px auto;
+    }
+
+}
+
+@media only screen and (min-width: 768px) { 
+
+    .lease > h4 {
+        max-width: 70%;
+    }
+
+    .lease {
+        display: flex;
+        padding: 80px 40px;
+        margin: 80px auto;
+    }
+
+}

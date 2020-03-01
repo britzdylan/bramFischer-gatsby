@@ -3,3 +3,7 @@ Home Header
     > create dyanmic header for other pages
     > add links & state effects to mobile menu
     > create contextual menu
+
+Footer
+    > add google maps
+    > create form functionality

@@ -1,11 +1,13 @@
 import { Link } from "gatsby"
 import React from "react"
+import footerStyles from "../components/footer.module.css"
 
 const Footer = () => {
     return (
         <footer>
-            <div className="footer-info" >
-                <div className="contact-us" id="contact-form">
+            <div className={footerStyles.footerInfo} >
+                {/* contact us form */}
+                <div className={footerStyles.contactForm} id="contact-form">
                     <h3>Contact Us</h3>
                     <form action="">
                         
@@ -20,15 +22,17 @@ const Footer = () => {
 
                         <input type="submit" value="Submit" className="btn"/>
                     </form>
+                    {/* google maps */}
                 </div>
                 
-                <div className="google-maps" id="map">
+                <div className={footerStyles.map} id="map">
                 
                 </div>
             </div>
-            <div className="footer-nav">
+            {/* copyright info and extra links */}
+            <div className={footerStyles.footerNav}>
                 <small>
-                Copyright All Rights Reserved Netwater Properties PTY (Ltd). Design by Blak Studios
+                Copyright All Rights Reserved Netwater Properties PTY (Ltd).
                 </small>
                 <nav>
                     <small><Link to="privacy-policy" className="wht">Privacy Policy</Link></small>
