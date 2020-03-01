@@ -1,0 +1,340 @@
+ .top {
+     background-color: #548F6C;
+     width: 100%;
+     height: 30px;
+     max-height: 30px;
+     display: flex;
+     padding: 0 10%;
+     justify-content: flex-end;
+     align-items: center;
+ }
+
+ .top > small {
+    padding: 0 0 0 16px;
+    line-height: 1;
+ }
+
+
+.nav {
+    background-color: white;
+    height: 100px;
+    max-height: 100px;
+    padding: 0 10%;
+}
+
+.mainMenu {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+}
+
+.brand {
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+.brand > a {
+    color: black;
+}
+
+.brand > a:hover {
+    color: black;
+}
+
+.mainMenu > li {
+    padding: 0 0 0 16px;
+}
+
+.header {
+    max-height: 350px;
+    height: 350px;
+    background: url('./default_banner.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.header > h1 {
+    font-size: 2em;
+    max-width: 60%;
+}
+
+.tagline {
+    color: white;
+}
+
+.bottom {
+    display: none;
+}
+
+.cell, .email {
+    color: white;
+}
+
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    
+     .cell {
+        display: none;
+    }
+
+    .email {
+        padding: 0;
+        margin: 0;
+    }
+
+    .top {
+        justify-content: center;
+    }
+   
+    .header {
+        height: auto;
+        max-height: 100vh;
+        display: block;
+        text-align: left;
+        padding: 32px 10%;
+    }
+
+    .header > h1 {
+        font-size: 1.6em;
+        max-width: 100%;
+        margin-top: 16px;
+        color: white;
+        margin-bottom: 50px;
+    }
+
+    .mainMenu {
+        display: none;
+    }
+
+    .top > small {
+        padding: 0 16px;
+        line-height: 1;
+     }
+
+    .nav {
+        display: block;
+        height: auto;
+        padding: 16px 10%;
+        text-align: center;
+    }
+
+    .mobileMenu {
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        align-content: flex-end;
+        padding: 0;
+        font-size: 14px;
+        margin : 0;
+    }
+
+    .bottom {
+        height: auto;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: white;
+        display: block;
+        padding: 8px 0;
+        -webkit-box-shadow: 0px -5px 20px 0px rgba(0,0,0,0.1);
+        -moz-box-shadow: 0px -5px 20px 0px rgba(0,0,0,0.1);
+        box-shadow: 0px -5px 20px 0px rgba(0,0,0,0.1);
+    }
+
+    .mobileIcon {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .circle {
+        width: 6px;
+        height: 6px;
+        margin: 3px;
+        background: #548F6C;
+        border-radius: 50%;
+        display: block;
+      }
+   
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width : 767px) {
+    .nav {
+        display: block;
+        max-height: 500px;
+        height: auto;
+        padding: 16px 10%;
+        text-align: center;
+    }
+
+    .mainMenu {
+        display: none;
+    }
+
+    .mainMenu > li {
+        padding: 0 8px;
+        margin-top: 16px;
+        
+    }
+
+    .header {
+        height: 200px;
+        display: block;
+    }
+
+    .header > h1 {
+        font-size: 1.4em;
+        max-width: 100%;
+        margin: 32px 0;
+    }
+
+    .top {
+        justify-content: center;
+    }
+
+    .top > small {
+        padding: 0  8px;
+        line-height: 1;
+     }
+
+     .mobileMenu {
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        align-content: flex-end;
+        padding: 0;
+        font-size: 14px;
+        margin : 0;
+    }
+
+    .bottom {
+        height: auto;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: white;
+        display: block;
+        padding: 8px 0;
+        -webkit-box-shadow: 0px -5px 20px 0px rgba(0,0,0,0.1);
+        -moz-box-shadow: 0px -5px 20px 0px rgba(0,0,0,0.1);
+        box-shadow: 0px -5px 20px 0px rgba(0,0,0,0.1);
+    }
+
+    .mobileIcon {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .circle {
+        width: 6px;
+        height: 6px;
+        margin: 3px;
+        background: #548F6C;
+        border-radius: 50%;
+        display: block;
+      }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width : 991px) {
+    .nav {
+        display: block;
+        text-align: center;
+        max-height: 500px;
+        height: auto;
+        padding: 16px 10%;
+    }
+
+    .mainMenu {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mainMenu > li {
+        padding: 0 8px;
+        margin-top: 16px;
+    }
+
+    .header {
+        height: 200px;
+    }
+
+    .header > h1 {
+        font-size: 1.6em;
+        max-width: 60%;
+    }
+
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 1199px) and (min-width : 992px) {
+
+    .nav {
+        display: block;
+        text-align: center;
+        max-height: 500px;
+        height: auto;
+        padding: 16px 10%;
+    }
+
+    .mainMenu {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mainMenu > li {
+        padding: 0 8px;
+        margin-top: 16px;
+    }
+
+    .header {
+        height: 250px;
+    }
+
+    .header > h1 {
+        font-size: 1.8em;
+        max-width: 60%;
+    }
+    
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header {
+        max-height: 350px;
+        height: 350px;
+    }
+
+    .header > h1 {
+        font-size: 2em;
+        max-width: 60%;
+    }
+    
+}

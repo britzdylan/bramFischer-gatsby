@@ -1,0 +1,5 @@
+Home Header
+    > add logo
+    > create dyanmic header for other pages
+    > add links & state effects to mobile menu
+    > create contextual menu
