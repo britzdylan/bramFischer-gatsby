@@ -36,8 +36,11 @@ const indexPage = () => {
                             </li>
                         </ul>
                 <div className={indexStyles.lease}>
-                    <h4 className="wht">Need to setup your store? Get in touch with us today!</h4>
+                    <div>
+                    <h4 className="">Need to setup your store? Get in touch with us today!</h4>
                     <Link to="/lease" className="btn btn-alt">Lease from us</Link>
+                    </div>
+                    <img className={indexStyles.ctaImage} src="../../cta.png" alt=""/>
                 </div>
             </main>
 

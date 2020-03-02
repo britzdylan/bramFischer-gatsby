@@ -12,23 +12,35 @@
 .lease {
     margin: 160px auto;
     border-radius: 8px;
-    background-color: #548F6C;
-    padding: 80px 40px;
+    background-color: #66B574;
+    padding: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 100%;
 }
 
-.lease > h4 {
-    margin: 0;
+.lease > div > h4 {
+    margin: 32px 0;
     line-height: 1;
-    max-width: 70%;
+    max-width: 100%;
+    color: white;
 }
 
 .h2 {
     text-align: center;
     margin-top: 160px;
 }
+.lease > div {
+    height: 150px;
+    overflow: visible;
+}
+
+.lease > div > a {
+    margin: 32px 0;
+}
+
+
 
 
 @media only screen and (max-width: 600px) {
@@ -62,15 +74,21 @@
         font-size: 1.3rem;
         max-width: 100%;
     }
+
+    .ctaImage {
+       
+        max-width: 100%;
+        padding: 32px;
+    }
     
 
 }
 
 @media only screen and (min-width: 600px) { 
 
-    .lease > h4 {
+    .lease > div > h4 {
         max-width: 100%;
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         margin-bottom: 32px;
     }
 
@@ -78,6 +96,13 @@
         display: block;
         padding: 40px 20px;
         margin: 80px auto;
+        text-align: center;
+    }
+    .ctaImage {
+       
+        max-width: 100%;
+        padding: 32px;
+        text-align: center;
     }
 
 }
@@ -89,9 +114,24 @@
     }
 
     .lease {
-        display: flex;
-        padding: 80px 40px;
+        display: block;
+        padding: 20px 40px;
         margin: 80px auto;
+        max-width: 80%;
+    }
+    .ctaImage {
+        max-height: 60%;
+        max-width: 50%;
+        padding: 32px;
+    }
+
+}
+
+@media only screen and (min-width: 992px) { 
+
+    .lease {
+        text-align: left;
+        display: flex;
     }
 
 }
