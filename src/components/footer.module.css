@@ -6,13 +6,13 @@
 
 .footerNav {
     width: 100%;
-    background-color: #548F6C;
+    background-color: #E8E8E8;
     height: auto;
     padding: 8px 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    color: #999999;
     margin: 32px 0 0 0;
     max-height: 65px;
 }
@@ -31,6 +31,10 @@ input[type="submit"] {
     height: 300px;
     width: 50%;
     margin: 0 auto;
+}
+
+.links {
+    color: #999999;
 }
 
 /* Extra small devices (phones, 600px and down) */

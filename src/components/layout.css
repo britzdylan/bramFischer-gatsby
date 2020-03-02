@@ -52,7 +52,7 @@ label {
 
 a {
     text-decoration: none;
-    color: #548F6C;
+    color: #333;
     transition: all 0.3s ease-in-out;
 }
 
@@ -72,6 +72,7 @@ a:hover {
 
 .content {
     padding: 0 10%;
+    margin: 72px 0;
 }
 
 .wht { 

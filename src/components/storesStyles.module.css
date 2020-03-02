@@ -1,0 +1,48 @@
+.container {
+    background-color: white;
+    max-height: 245px;
+    height: 245px;
+    width: 360px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.2);
+    overflow: visible;
+    padding:  0 16px;
+}
+
+.img {
+    background-image: url('./default_banner.jpg');
+    background-size: cover;
+    width: 300px;
+    height: 150px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 8px;
+    color: white;
+    top: -30px;
+    position: relative;
+}
+
+.img > h2 {
+    color: white;
+}
+
+.meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.listing {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-row-gap: 72px;
+    justify-items: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}

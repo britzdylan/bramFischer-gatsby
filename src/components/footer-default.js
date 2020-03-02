@@ -35,8 +35,8 @@ const Footer = () => {
                 Copyright All Rights Reserved Netwater Properties PTY (Ltd).
                 </small>
                 <nav>
-                    <small><Link to="privacy-policy" className="wht">Privacy Policy</Link></small>
-                    <small><Link to="terms-conditions" className="wht">Terms and Conditions</Link></small>
+                    <small><Link to="privacy-policy" className={footerStyles.links}>Privacy Policy</Link></small>
+                    <small><Link to="terms-conditions" className={footerStyles.links}>Terms and Conditions</Link></small>
                 </nav>
             </div>
         </footer>
