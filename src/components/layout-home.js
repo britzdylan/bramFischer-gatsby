@@ -1,13 +1,13 @@
 import React from 'react'
-import Header from './header'
+import Header from './home-header'
 import Footer from './footer-default'
 import './normalize.css'
 import './layout.css'
 
-const LayoutDefault = (props) => {
+const LayoutHome = (props) => {
     return (
         <div>
-            <Header name={props.name}/>
+            <Header />
             {props.children}
             <Footer />
         </div>
@@ -16,4 +16,4 @@ const LayoutDefault = (props) => {
     )
 }
 
-export default LayoutDefault
+export default LayoutHome

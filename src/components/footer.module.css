@@ -1,17 +1,4 @@
-.map {
-    background-color: black;
-    height: 300px;
-    width: 50%;
-    margin: 0 auto;
-}
 
-.footerInfo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: no-wrap;
-    padding:  0 10%;
-}
 
 .contactForm {
     max-width: 40%;
@@ -39,14 +26,23 @@ input[type="submit"] {
     margin: 0;
 }
 
+.map {
+    background-color: black;
+    height: 300px;
+    width: 50%;
+    margin: 0 auto;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .footerInfo {
         display: block;
+        padding: 0 10%;
     }
 
     .contactForm {
         max-width: 100%;
+        width: 100%;
         margin: 32px 0;
     }
 
@@ -80,6 +76,22 @@ input[type="submit"] {
         justify-content: center;
     }
 
+    .contactForm {
+        max-width: 100%;
+        width: 100%;
+        margin: 32px 0;
+    }
+
+    .footerInfo {
+        display: block;
+        padding: 0 10%;
+    }
+
+    .map {
+        width: 100%;
+        margin: 32px auto;
+    }
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -90,6 +102,27 @@ input[type="submit"] {
 
     .footerNav {
         flex-wrap: wrap;
+    }
+
+    .contactForm {
+        max-width: 40%;
+        width: 100%;
+        margin: 32px;
+    }
+
+    .map {
+        background-color: black;
+        height: 300px;
+        width: 50%;
+        margin: 0 auto;
+    }
+    
+    .footerInfo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: no-wrap;
+        padding:  0 10%;
     }
 
 }

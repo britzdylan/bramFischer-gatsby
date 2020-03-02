@@ -1,12 +1,12 @@
 import React from "react"
 import Link from 'gatsby-link'
-import LayoutDefault from '../components/layout-default'
+import LayoutHome from '../components/layout-home'
 import indexStyles from '../components/index.module.css'
 
 
 const indexPage = () => {
     return (
-        <LayoutDefault >
+        <LayoutHome >
              <main className="content">
                     <h2 className={indexStyles.h2}>A little bit about us</h2>
                         <ul className={indexStyles.about}>
@@ -41,7 +41,7 @@ const indexPage = () => {
                 </div>
             </main>
 
-        </LayoutDefault>
+        </LayoutHome>
        
     )
 }

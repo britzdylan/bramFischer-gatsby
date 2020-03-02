@@ -1,10 +1,10 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import headerStyles from './header-default.module.css'
+import headerStyles from './header.module.css'
 
 
 
-const Header = (props) => { //main home page header 
+const Header = () => { //main home page header 
     return (
         <header> 
 
@@ -33,7 +33,8 @@ const Header = (props) => { //main home page header
             {/* Page header */}
 
             <div className={headerStyles.header} >
-                <h1 className="wht">{props.name}</h1>
+                <h1 className="wht">Hello Randburg, Welcome to Bram Fischer Centre, Your one stop convenient shopping experience.</h1>
+                <Link to="/stores" className="btn btn-alt">Browse our Stores</Link>
             </div>
 
 

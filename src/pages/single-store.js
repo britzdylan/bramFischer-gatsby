@@ -1,9 +1,14 @@
 import React from "react"
 // import Link from 'gatsby-link'
+import Layout from '../components/layout-default'
 
 const singleStore = () => {
     return (
-        <h1>Single Store Page</h1>
+        <Layout>
+            <main className="content">
+
+            </main>
+        </Layout>
     )
 
 }

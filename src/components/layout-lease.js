@@ -4,10 +4,10 @@ import FooterLease from '../components/footer-lease'
 import './normalize.css'
 import './layout.css'
 
-const LayoutDefault = (props) => {
+const LayoutLease = (props) => {
     return (
         <div>
-            <Header />
+            <Header name={props.name}/>
             {props.children}
             <FooterLease />
         </div>
@@ -16,4 +16,4 @@ const LayoutDefault = (props) => {
     )
 }
 
-export default LayoutDefault
+export default LayoutLease

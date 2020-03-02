@@ -1,9 +1,17 @@
 import React from "react"
 // import Link from 'gatsby-link'
+import Layout from '../components/layout-default'
+
 
 const stores = () => {
+    const name = "Browse our Stores";
     return (
-        <h1>Stores Page</h1>
+        <Layout name={name}>
+            <main className="content">
+
+            </main>
+        </Layout>
+        
     )
 
 }

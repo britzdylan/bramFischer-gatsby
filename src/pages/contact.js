@@ -1,9 +1,14 @@
 import React from "react"
 // import Link from 'gatsby-link'
+import Layout from '../components/layout-default'
 
 const contact = () => {
+    const name = "Contact us";
     return (
-        <h1>Contact Page</h1>
+        <Layout name={name}>
+
+        </Layout>
+        
     )
 
 }
