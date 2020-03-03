@@ -11,10 +11,11 @@ const stores = ({ data }) => {
             <main className="content" >
                 <div className={storesStyles.listing}>
 
-                {data.allStrapiShop.edges.map(document => (
+                {data.allStrapiShop.edges.map((document, i) => (
                     <div key={document.node.strapiId} className={storesStyles.container}>
                         <div className={storesStyles.img}>
-                            {/* <img src={`https://netwater-cms.herokuapp.com/upload/files/${document.banner.id}`} width="50px" /> */}
+                            {/* <img src={document.node.logo.publicURL} width="50px" height="50px" alt={document.node.name} /> */}
+                            {console.log(document.node.logo.publicURL)}
                             <h4 className="wht">{document.node.name}</h4>
                         </div>
                         <div className={storesStyles.meta}>
