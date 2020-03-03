@@ -11,15 +11,15 @@ const stores = ({ data }) => {
             <main className="content" >
                 <div className={storesStyles.listing}>
 
-                {data.allStrapiShop.nodes.map(document => (
-                    <div key={document.id} className={storesStyles.container}>
+                {data.allStrapiShop.edges.map(document => (
+                    <div key={document.node.strapiId} className={storesStyles.container}>
                         <div className={storesStyles.img}>
                             {/* <img src={`https://netwater-cms.herokuapp.com/upload/files/${document.banner.id}`} width="50px" /> */}
-                            <h4 className="wht">{document.name}</h4>
+                            <h4 className="wht">{document.node.name}</h4>
                         </div>
                         <div className={storesStyles.meta}>
-                            <small>{document.categories[0].name}</small>
-                            <Link to={`/${document.id}`} className="btn">More Info</Link>
+                            <small>{document.node.name}</small>
+                            <Link to={`/${document.node.id}`} className="btn">More Info</Link>
                         </div>
                     </div>
                 ))}
@@ -35,21 +35,19 @@ const stores = ({ data }) => {
 }
 
 export const pageQuery = graphql`  
-  query IndexQuery {
-    allStrapiShop(sort: {order: ASC, fields: name}) {
-        nodes {
-          name
-          id
-          strapiId
-          banner {
-            id
-          }
-          categories {
-            name
-          }
+query MyQuery {
+  allStrapiShop {
+    edges {
+      node {
+        name
+        strapiId
+        logo {
+          publicURL
         }
       }
     }
+  }
+}
 `
 
 export default stores
