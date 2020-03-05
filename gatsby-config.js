@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: 'bramFischer Shopping Centre',
@@ -16,7 +20,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-strapi',
       options: {
-        apiURL: 'https://netwater-cms.herokuapp.com',
+        apiURL:  'https://netwater-cms.herokuapp.com',
         contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
           'shop',
           'categorie'

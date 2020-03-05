@@ -2,6 +2,10 @@ import React from 'react'
 import Link from 'gatsby-link'
 import headerStyles from './header-default.module.css'
 
+const activeStyles = {
+    color: 'green',
+    fontWeight: '700'
+}
 
 
 const Header = (props) => { //main home page header 
@@ -19,13 +23,13 @@ const Header = (props) => { //main home page header
                 <h1 className={headerStyles.brand}><Link to="/">bramFischer</Link></h1>
                 <ul className={headerStyles.mainMenu}>
                     <li>
-                        <Link to="/stores" >Store Directory</Link>
+                        <Link to="/stores" activeStyle={activeStyles} >Store Directory</Link>
                     </li>
                     <li>
-                        <Link to="/contact" >Contact Us</Link>
+                        <Link to="/contact" activeStyle={activeStyles} >Contact Us</Link>
                     </li>
                     <li>
-                        <Link to="/lease" >Lease from us</Link>
+                        <Link to="/lease" activeStyle={activeStyles} >Lease from us</Link>
                     </li>
                 </ul>
             </nav>
