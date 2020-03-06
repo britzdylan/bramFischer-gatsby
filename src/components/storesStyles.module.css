@@ -69,16 +69,27 @@
     align-items: center;
 }
 
-.filterList > ul {
+.filterList > li  {
     padding: 0;
     margin: 4px 0;
-    color: #999999;
+    transition: all 0.6s ease-in-out;
 }
 
-.filterList > ul > a {
+.filterList > li > a {
     color: #999999;
     margin: 0 8px;
 }
+
+.filterList > li:hover{
+    transform: scale(0.95);
+    color: #548F6C;
+}
+
+.filterList > li > a:hover{
+    color: #548F6C;
+}
+
+
 
 .filterSelector {
     font-size: 700;

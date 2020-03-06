@@ -1,5 +1,6 @@
 import React from "react"
-import {Link, graphql, StaticQuery } from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
+import Link from 'gatsby-link'
 import Image from 'gatsby-image'
 import Layout from '../components/layout-default'
 import storesStyles from '../components/storesStyles.module.css'
@@ -42,7 +43,7 @@ const stores = ({ data }) => {
             }
           }
         `}
-        render={data => (
+        render={data =>  (
   
           <main className="content" >
           <div className={storesStyles.filterContainer} >
@@ -50,12 +51,12 @@ const stores = ({ data }) => {
                 <p>Filter stores:</p>
               </div>
               <div className={storesStyles.filterOptions} id="dropDown"  >
-                <li className={storesStyles.filterList}>
+                <ul className={storesStyles.filterList}>
                   {data.allStrapiCategorie.edges.map((cat, i) => (
-                        <ul key={cat.node.strapiId} ><Link activeStyle={activeStyles} to={`./category/${cat.node.strapiId}`}>{cat.node.name}</Link>|</ul>
+                        <li key={cat.node.strapiId} ><Link activeStyle={activeStyles} to={`./category/${cat.node.strapiId}`}>{cat.node.name}</Link>|</li>
                         ))
                       }
-                </li>
+                </ul>
               </div>  
           </div>
           <div className={storesStyles.listing}>

@@ -1,11 +1,134 @@
 import React from 'react'
 import Layout from '../components/layout-default'
+import Link from 'gatsby-link'
+import Image from 'gatsby-image'
+
+import shopStyles from '../components/shopStyles.module.css'
+
+export const query = graphql`
+query singleShop($id: Int!) {
+    strapiShop(strapiId: {eq: $id}) {
+      email
+      contact
+      description
+      logo {
+        childImageSharp {
+            fixed(width: 150, height: 150) {
+                ...GatsbyImageSharpFixed_withWebp
+            }
+        }
+      }
+      strapiId
+      published
+      website
+      times {
+        friday
+        monday
+        saturday
+        sunday
+        teusday
+        thursday
+        tuesday
+        wednesday
+      }
+      media {
+        name
+        id
+        url
+      }
+      name
+    }
+  }
+`
 
 
-const shop = () => {
+const shop = ({ data }) => {
+    const shop = data.strapiShop;
     return (
-        <Layout >
-            
+        <Layout name={shop.name} >
+            <div className={shopStyles.grid}>
+                <aside className={shopStyles.sidebar}>
+                    <div className={shopStyles.profilePic}>
+                        <Image fixed={shop.logo.childImageSharp.fixed} alt={shop.name} />
+                    </div>
+                        <div className={shopStyles.detailsContainer}>
+                            <div className={shopStyles.details}>
+                                <h3>Contact Details</h3>
+                                    <div className={shopStyles.div}>
+                                        <span className={shopStyles.contact}> 
+                                            <img src="../../email.svg" alt="" height="15px" width="15px" />
+                                            <small>{shop.email}</small> 
+                                        </span>
+                                        <span className={shopStyles.contact}> 
+                                            <img src="../../telephone.svg" alt="" height="15px" width="15px" />
+                                            <small>0{shop.contact}</small> 
+                                        </span>
+                                        <span className={shopStyles.contact}> 
+                                            <img src="../../website.svg" alt="" height="15px" width="15px" />
+                                            <small>{shop.website}</small> 
+                                        </span>
+                                    </div>
+                                    <h4>Times</h4>
+                                        <div>
+                                            <span className={shopStyles.times}>
+                                                <p>Mon:</p>
+                                                <p>{shop.times.monday}</p>
+                                            </span>
+                                            <hr/>
+                                            <span className={shopStyles.times}>
+                                                <p>Tues:</p>
+                                                <p>{shop.times.teusday}</p>
+                                            </span>
+                                            <hr/>
+                                            <span className={shopStyles.times}>
+                                                <p>Wed:</p>
+                                                <p>{shop.times.wednesday}</p>
+                                            </span>
+                                            <hr/>
+                                            <span className={shopStyles.times}>
+                                                <p>Thu:</p>
+                                                <p>{shop.times.thursday}</p>
+                                            </span>
+                                            <hr/>
+                                            <span className={shopStyles.times}>
+                                                <p>Fri:</p>
+                                                <p>{shop.times.friday}</p>
+                                            </span>
+                                            <hr/>
+                                            <span className={shopStyles.times}>
+                                                <p>Sat:</p>
+                                                <p>{shop.times.saturday}</p>
+                                            </span>
+                                            <hr/>
+                                            <span className={shopStyles.times}>
+                                                <p>Sun:</p>
+                                                <p>{shop.times.sunday}</p>
+                                            </span>
+                                            <hr/>
+                                        </div>
+                            </div>
+                                        <div className={shopStyles.additional}>
+                                            <h4>Additional Information</h4>
+                                            <p>Download our Menu</p>
+                                            <Link className='btn'>Download</Link>
+                                        </div>
+                    </div>
+                </aside>
+                <main className={shopStyles.main}>
+                    <div className={shopStyles.about}>
+                        <h2>About {shop.name}</h2>
+                        <article>{shop.description}</article>
+                    </div>
+                    <div className={shopStyles.media}>
+                        {shop.media.map((data, i) => (
+                            <div className={shopStyles.gridItem} key={data.id} >
+                                <img src={data.url} alt={data.name} width="100%"/>
+                            </div>
+                        ))}
+                        
+                    </div>
+                </main>
+            </div>
         </Layout>
         
     )
