@@ -13,7 +13,7 @@ query singleShop($id: Int!) {
       description
       logo {
         childImageSharp {
-            fixed(width: 150, height: 150) {
+            fixed(width: 200, height: 200) {
                 ...GatsbyImageSharpFixed_withWebp
             }
         }
@@ -26,7 +26,7 @@ query singleShop($id: Int!) {
         monday
         saturday
         sunday
-        teusday
+        tuesday
         thursday
         tuesday
         wednesday
@@ -57,52 +57,52 @@ const shop = ({ data }) => {
                                     <div className={shopStyles.div}>
                                         <span className={shopStyles.contact}> 
                                             <img src="../../email.svg" alt="" height="15px" width="15px" />
-                                            <small>{shop.email}</small> 
+                                            <small><a href={`mailto:${shop.email ? shop.email : '-'}`}>{shop.email ? shop.email : '-'}</a></small> 
                                         </span>
                                         <span className={shopStyles.contact}> 
                                             <img src="../../telephone.svg" alt="" height="15px" width="15px" />
-                                            <small>0{shop.contact}</small> 
+                                            <small><a href={`tel:0${shop.contact ? shop.contact : '-'}`}>0{shop.contact ? shop.contact : '-'}</a></small> 
                                         </span>
                                         <span className={shopStyles.contact}> 
                                             <img src="../../website.svg" alt="" height="15px" width="15px" />
-                                            <small>{shop.website}</small> 
+                                            <small><a target="_blank" rel="noopener noreferrer" href={shop.website ? shop.website : '-'}>{shop.website ? shop.website : '-'}</a></small> 
                                         </span>
                                     </div>
                                     <h4>Times</h4>
                                         <div>
                                             <span className={shopStyles.times}>
                                                 <p>Mon:</p>
-                                                <p>{shop.times.monday}</p>
+                                                <p>{shop.times.monday ? shop.times.monday : '-'}</p>
                                             </span>
                                             <hr/>
                                             <span className={shopStyles.times}>
                                                 <p>Tues:</p>
-                                                <p>{shop.times.teusday}</p>
+                                                <p>{shop.times.tuesday ? shop.times.tuesday : '-'}</p>
                                             </span>
                                             <hr/>
                                             <span className={shopStyles.times}>
                                                 <p>Wed:</p>
-                                                <p>{shop.times.wednesday}</p>
+                                                <p>{shop.times.wednesday ? shop.times.wednesday : '-'}</p>
                                             </span>
                                             <hr/>
                                             <span className={shopStyles.times}>
                                                 <p>Thu:</p>
-                                                <p>{shop.times.thursday}</p>
+                                                <p>{shop.times.thursday ? shop.times.thursday : '-'}</p>
                                             </span>
                                             <hr/>
                                             <span className={shopStyles.times}>
                                                 <p>Fri:</p>
-                                                <p>{shop.times.friday}</p>
+                                                <p>{shop.times.friday ? shop.times.friday : '-'}</p>
                                             </span>
                                             <hr/>
                                             <span className={shopStyles.times}>
                                                 <p>Sat:</p>
-                                                <p>{shop.times.saturday}</p>
+                                                <p>{shop.times.saturday ? shop.times.saturday : '-'}</p>
                                             </span>
                                             <hr/>
                                             <span className={shopStyles.times}>
                                                 <p>Sun:</p>
-                                                <p>{shop.times.sunday}</p>
+                                                <p>{shop.times.sunday ? shop.times.sunday : '-'}</p>
                                             </span>
                                             <hr/>
                                         </div>
@@ -122,7 +122,7 @@ const shop = ({ data }) => {
                     <div className={shopStyles.media}>
                         {shop.media.map((data, i) => (
                             <div className={shopStyles.gridItem} key={data.id} >
-                                <img src={data.url} alt={data.name} width="100%"/>
+                                <img src={data.url ? data.url : ''} alt={data.name} width="100%"/>
                             </div>
                         ))}
                         

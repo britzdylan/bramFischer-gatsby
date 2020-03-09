@@ -23,9 +23,11 @@ module.exports = {
         apiURL:  'https://netwater-cms.herokuapp.com',
         contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
           'shop',
-          'categorie'
+          'categorie',
+          'privacy-policy'
+
         ],
-        queryLimit: 1000,
+        queryLimit: 5000,
       },
     },
     "gatsby-transformer-sharp",

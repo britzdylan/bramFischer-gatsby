@@ -59,12 +59,12 @@ hr {
 }
 
 .profilePic {
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
     background-color: white;
     margin: 0 auto 32px auto;
     border-radius: 50%;
-    border: none;
+    border: 1px solid black;
 }
 
 .sidebar { min-width: 250px;

@@ -1,13 +1,23 @@
 import React from "react"
 // import Link from 'gatsby-link'
 import Layout from '../components/layout-default'
+import ReactMarkdown from 'react-markdown'
 
-const privacy = () => {
+ export const query = graphql`
+ query privacyContent {
+    strapiPrivacyPolicy(strapiId: {eq: 2}) {
+        content
+        name
+      }
+   }
+ `
+
+const privacy = ({ data }) => {
     const name = "Privacy Policy";
     return (
         <Layout name={name}>
             <main className="content">
-                <h1>Privacy Policy</h1>
+                <ReactMarkdown source={data.strapiPrivacyPolicy.content} />
             </main>
         </Layout>
         

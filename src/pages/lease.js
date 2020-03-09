@@ -2,9 +2,20 @@ import React from "react"
 // import Link from 'gatsby-link'
 import LayoutLease from '../components/layout-lease'
 import leaseStyles from '../components/leaseStyles.module.css'
+import { graphql } from 'gatsby'
+import ReactMarkdown from 'react-markdown'
+
+ export const query = graphql`
+ query leaseContent {
+    strapiPrivacyPolicy(strapiId: {eq: 1}) {
+        content
+        name
+      }
+   }
+ `
 
 
-const lease = () => {
+const lease = ({ data }) => {
      const name = "Lease from us";
     return (
         
@@ -13,7 +24,7 @@ const lease = () => {
                 <div className={leaseStyles.container}>
                     <div className={leaseStyles.contactForm} id="contact-form">
                             <h3>Lease Request Form</h3>
-                            <form action="">
+                            <form method="post" action="#" data-netlify="true" name="lease" data-netlify-honeypot="bot-field">
                                 
                                 <label htmlFor="name">Name</label>
                                 <input type="text" name="name" id="c-name" placeholder="John Doe" required/>
@@ -29,20 +40,7 @@ const lease = () => {
                         </div>
                         <div className={leaseStyles.text}>
                             <h2>How it Works</h2>
-                            <p>If you are interested in shop/office space kindly contact Centre Management.
-
-Procedure for application to lease:
-•Set up a meeting with the Leasing Administrator to view the space.
-•If you are interested you need to have the following ready:
-
- Completed Application Form
- Individual Capacity
- Company
- Business Plan
- Financial Statements
- Fica Documents
- Application to be sent to Landlord for approval.
-2 Months Deposits</p>
+                            <ReactMarkdown source={data.strapiPrivacyPolicy.content} />
                         </div>
                 </div>
                 
