@@ -5,7 +5,7 @@ import Image from 'gatsby-image'
 import Layout from '../components/layout-default'
 import storesStyles from '../components/storesStyles.module.css'
 
-const name = "Browse our Stores";
+
 const activeStyles = {
   fontSize: '700',
   color: 'green'
@@ -45,20 +45,21 @@ export const query = graphql`
 
 const Category = ({ data,props }) => {
     return (
-        <Layout name={name}>
+        <Layout name={data.strapiCategorie.name}>
               <main className="content" >
               <div className={storesStyles.filterContainer} >
                   <div className={storesStyles.filterSelector} id="filterSelector">
                     <p>Filter stores:</p>
                   </div>
                   <div className={storesStyles.filterOptions} id="dropDown"  >
-                    <ul className={storesStyles.filterList}>
-                      {data.allStrapiCategorie.edges.map((cat, i) => (
-                            <li key={cat.node.strapiId} ><Link  to={`./category/${cat.node.strapiId}`} activeStyle={activeStyles}>{cat.node.name}</Link>|</li>
+                <ul className={storesStyles.filterList}>
+                    {data.allStrapiCategorie.edges.map((cat, i) => (
+                            <li key={cat.node.strapiId} ><Link activeStyle={activeStyles} to={`./category/${cat.node.strapiId}`}>{cat.node.name}</Link>|</li>
                             ))
-                          }
-                    </ul>
-                  </div>  
+                        }
+                </ul>
+                    <p>Viewing:{}</p>
+            </div>
               </div>
               <div className={storesStyles.listing}>
                   {data.allStrapiShop.edges.map((document, i) => (

@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import React from "react"
 import footerStyles from "../components/footer.module.css"
+import GoogleMap from "../components/maps.jsx"
 
 
 const FooterLease = () => {
@@ -9,8 +10,8 @@ const FooterLease = () => {
             <div className={footerStyles.footerInfo} >
                     {/* google maps */}
                     <div className={footerStyles.map} id="map">
-                
-                     </div>
+                        <GoogleMap style={{height: '300px'}} />
+                    </div>
                 </div>
                 
                 

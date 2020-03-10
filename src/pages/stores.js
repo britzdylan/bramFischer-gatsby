@@ -4,12 +4,13 @@ import Link from 'gatsby-link'
 import Image from 'gatsby-image'
 import Layout from '../components/layout-default'
 import storesStyles from '../components/storesStyles.module.css'
+// 
 
-const name = "Browse our Stores";
 const activeStyles = {
-  fontSize: '700',
-  color: 'green'
+  color: 'green',
+  fontWeight: '700'
 }
+const name = "Browse our Stores";
 
 const stores = ({ data }) => {
   return (
@@ -52,12 +53,13 @@ const stores = ({ data }) => {
               </div>
               <div className={storesStyles.filterOptions} id="dropDown"  >
                 <ul className={storesStyles.filterList}>
-                  {data.allStrapiCategorie.edges.map((cat, i) => (
-                        <li key={cat.node.strapiId} ><Link activeStyle={activeStyles} to={`./category/${cat.node.strapiId}`}>{cat.node.name}</Link>|</li>
-                        ))
-                      }
+                    {data.allStrapiCategorie.edges.map((cat, i) => (
+                            <li key={cat.node.strapiId} ><Link activeStyle={activeStyles} to={`./category/${cat.node.strapiId}`}>{cat.node.name}</Link>|</li>
+                            ))
+                        }
                 </ul>
-              </div>  
+                    <p>Viewing:{}</p>
+            </div>
           </div>
           <div className={storesStyles.listing}>
               {data.allStrapiShop.edges.map((document, i) => (

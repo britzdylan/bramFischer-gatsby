@@ -20,7 +20,7 @@ const Header = (props) => { //main home page header
 
             {/* main navigation for desktops & tablets */}
             <nav className={headerStyles.nav} >
-                <h1 className={headerStyles.brand}><Link to="/">bramFischer</Link></h1>
+                <Link to="/"><img src='../../bramfischer.svg' width="250px" /></Link>
                 <ul className={headerStyles.mainMenu}>
                     <li>
                         <Link to="/stores" activeStyle={activeStyles} >Store Directory</Link>
@@ -50,7 +50,7 @@ const Header = (props) => { //main home page header
                     </li>
                     <li>
                         
-                        <Link to="/contact-us" ><img src="../../atm.svg" alt="" className={headerStyles.mobileIcon} height="25px" width="25px"/>Contact</Link>
+                        <Link to="/contact" ><img src="../../atm.svg" alt="" className={headerStyles.mobileIcon} height="25px" width="25px"/>Contact</Link>
                     </li>
                     <li>
                         

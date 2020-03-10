@@ -29,9 +29,30 @@ input[type="submit"] {
 .map {
     background-color: black;
     height: 300px;
-    width: 50%;
     margin: 0 auto;
+
 }
+
+.map > div > div > div > div > div > div > div {
+    overflow: visible!important;
+}
+.map > div > div {
+    overflow: visible;
+}
+
+.map > div {
+    overflow: visible;
+}
+
+.map > div > div > div {
+    overflow: visible;
+}
+
+.map > div > div > div > div {
+    overflow: visible;
+}
+
+
 
 .links {
     color: #999999;

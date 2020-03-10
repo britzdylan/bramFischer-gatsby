@@ -16,7 +16,7 @@ const Header = () => { //main home page header
 
             {/* main navigation for desktops & tablets */}
             <nav className={headerStyles.nav} >
-                <h1 className={headerStyles.brand}><Link to="/">bramFischer</Link></h1>
+            <Link to="/"><img src='../../bramfischer.svg' width="250px" /></Link>
                 <ul className={headerStyles.mainMenu}>
                     <li>
                         <Link to="/stores" >Store Directory</Link>
