@@ -9,6 +9,7 @@
     src: url("../fonts/Poppins-SemiBold.ttf");
     font-family: "Poppins thin";
     src: url("../fonts/Poppins-Thin.ttf");
+    font-display: swap;
   }
 
 html {font-size: 112.5%;} /*18px*/

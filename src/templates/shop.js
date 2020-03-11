@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/layout-default'
 import Link from 'gatsby-link'
 import Image from 'gatsby-image'
+import 'lazysizes' 
 
 import shopStyles from '../components/shopStyles.module.css'
 
@@ -56,15 +57,15 @@ const shop = ({ data }) => {
                                 <h3>Contact Details</h3>
                                     <div className={shopStyles.div}>
                                         <span className={shopStyles.contact}> 
-                                            <img src="../../email.svg" alt="" height="15px" width="15px" />
+                                            <img src="../../email.svg" alt="" height="15px" width="15px" className="lazyload" />
                                             <small><a href={`mailto:${shop.email ? shop.email : '-'}`}>{shop.email ? shop.email : '-'}</a></small> 
                                         </span>
                                         <span className={shopStyles.contact}> 
-                                            <img src="../../telephone.svg" alt="" height="15px" width="15px" />
+                                            <img src="../../telephone.svg" alt="" height="15px" width="15px"  className="lazyload" />
                                             <small><a href={`tel:0${shop.contact ? shop.contact : '-'}`}>0{shop.contact ? shop.contact : '-'}</a></small> 
                                         </span>
                                         <span className={shopStyles.contact}> 
-                                            <img src="../../website.svg" alt="" height="15px" width="15px" />
+                                            <img src="../../website.svg" alt="" height="15px" width="15px" className="lazyload" />
                                             <small><a target="_blank" rel="noopener noreferrer" href={shop.website ? shop.website : '-'}>{shop.website ? shop.website : '-'}</a></small> 
                                         </span>
                                     </div>
@@ -122,7 +123,7 @@ const shop = ({ data }) => {
                     <div className={shopStyles.media}>
                         {shop.media.map((data, i) => (
                             <div className={shopStyles.gridItem} key={data.id} >
-                                <img src={data.url ? data.url : ''} alt={data.name} width="100%"/>
+                                <img data-src={data.url ? data.url : ''} className="lazyload"  alt={data.name} width="100%"/>
                             </div>
                         ))}
                         
