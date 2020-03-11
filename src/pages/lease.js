@@ -24,7 +24,7 @@ const lease = ({ data }) => {
                 <div className={leaseStyles.container}>
                     <div className={leaseStyles.contactForm} id="contact-form">
                             <h3>Lease Request Form</h3>
-                            <form method="POST"  data-netlify="true" name="lease" data-netlify-recaptcha="true">
+                            <form method="POST"  data-netlify="true" name="lease" netlify-honeypot="bot-field">
                                 
                                 <label htmlFor="name">Name</label>
                                 <input type="text" name="name" id="c-name" placeholder="John Doe" required/>

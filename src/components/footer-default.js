@@ -20,7 +20,7 @@ const Footer = () => {
                 {/* contact us form */}
                 <div className={footerStyles.contactForm} id="contact-form">
                     <h3>Contact Us</h3>
-                    <form method="POST" data-netlify="true" name="contact" data-netlify-recaptcha="true">
+                    <form method="POST" data-netlify="true" name="contact" data-netlify-recaptcha="true" netlify-honeypot="bot-field">
                         
                         <label htmlFor="name">Name</label>
                         <input type="text" name="name" id="c-name" placeholder="John Doe" required/>
@@ -30,8 +30,9 @@ const Footer = () => {
 
                         <label htmlFor="message">Message</label>
                         <textarea name="message" id="c-message"  rows="10" placeholder="Leave your message here" required></textarea>
-
+                        <div data-netlify-recaptcha="true"></div>
                         <input type="submit" value="Submit" className="btn"/>
+                       
                     </form>
                     {/* google maps */}
                 </div>
