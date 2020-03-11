@@ -1,7 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import headerStyles from './header.module.css'
-import TransitionLink from "gatsby-plugin-transition-link"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 

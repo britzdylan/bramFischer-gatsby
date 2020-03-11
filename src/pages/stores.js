@@ -1,9 +1,10 @@
 import React from "react"
 import { graphql, StaticQuery } from 'gatsby'
-import Link from 'gatsby-link'
 import Image from 'gatsby-image'
 import Layout from '../components/layout-default'
 import storesStyles from '../components/storesStyles.module.css'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+
 // 
 
 const activeStyles = {
@@ -54,7 +55,7 @@ const stores = ({ data }) => {
               <div className={storesStyles.filterOptions} id="dropDown"  >
                 <ul className={storesStyles.filterList}>
                     {data.allStrapiCategorie.edges.map((cat, i) => (
-                            <li key={cat.node.strapiId} ><Link fade activeStyle={activeStyles} to={`./category/${cat.node.strapiId}`}>{cat.node.name}</Link>|</li>
+                            <li key={cat.node.strapiId} ><AniLink fade activeStyle={activeStyles} to={`./category/${cat.node.strapiId}`}>{cat.node.name}</AniLink>|</li>
                             ))
                         }
                 </ul>
@@ -69,7 +70,7 @@ const stores = ({ data }) => {
                       </div>
                       <div className={storesStyles.meta}>
                           <p className={storesStyles.h5}>{document.node.name}</p>
-                          <Link to={`/shop/${document.node.strapiId}`}  className="btn btn-alt">More Info</Link>
+                          <AniLink paintDrip hex="#94DD83"to={`/shop/${document.node.strapiId}`}  className="btn btn-alt">More Info</AniLink>
                       </div>
                   </div>
                 ))}

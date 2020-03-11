@@ -1,7 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import headerStyles from './header-default.module.css'
-import TransitionLink from "gatsby-plugin-transition-link"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const activeStyles = {
@@ -48,19 +46,19 @@ const Header = (props) => { //main home page header
                 <ul className={headerStyles.mobileMenu}>
                     <li>
                         
-                        <Link to="/stores" ><img src="../../cart.svg" alt="" className={headerStyles.mobileIcon} height="25px" width="25px"/>Stores</Link>
+                        <AniLink cover bg="#94DD83" to="/stores" ><img src="../../cart.svg" alt="" className={headerStyles.mobileIcon} height="25px" width="25px"/>Stores</AniLink>
                     </li>
                     <li>
                         
-                        <Link to="/contact" ><img src="../../atm.svg" alt="" className={headerStyles.mobileIcon} height="25px" width="25px"/>Contact</Link>
+                        <AniLink cover bg="#94DD83" to="/contact" ><img src="../../atm.svg" alt="" className={headerStyles.mobileIcon} height="25px" width="25px"/>Contact</AniLink>
                     </li>
                     <li>
                         
-                        <Link to="/lease" ><img src="../../parking.svg" alt="" className={headerStyles.mobileIcon} height="25px" width="25px" />Lease</Link>
+                        <AniLink cover bg="#94DD83" to="/lease" ><img src="../../parking.svg" alt="" className={headerStyles.mobileIcon} height="25px" width="25px" />Lease</AniLink>
                     </li>
                     <li>
                         
-                        <Link to="" ><div className={headerStyles.circle}></div><div className={headerStyles.circle}></div><div className={headerStyles.circle}></div></Link>
+                        <AniLink cover bg="#94DD83" to="" ><div className={headerStyles.circle}></div><div className={headerStyles.circle}></div><div className={headerStyles.circle}></div></AniLink>
                     </li>
                 </ul>
             </nav>
