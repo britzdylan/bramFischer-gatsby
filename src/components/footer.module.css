@@ -28,32 +28,17 @@ input[type="submit"] {
 
 .map {
     background-color: black;
+    max-height: 300px;
+    max-width: 673px;
     height: 300px;
     margin: 0 auto;
+    overflow: hidden;
 
 }
 
-.map > div > div > div > div > div > div > div {
-    overflow: visible!important;
+.map > picture > img {
+    height: 100%;
 }
-.map > div > div {
-    overflow: visible;
-}
-
-.map > div {
-    overflow: visible;
-}
-
-.map > div > div > div {
-    overflow: visible;
-}
-
-.map > div > div > div > div {
-    overflow: visible;
-}
-
-
-
 .links {
     color: #999999;
 }
