@@ -52,7 +52,7 @@
 .header {
    max-height: 350px;
    height: 350px;
-   background: url('./default_banner.webp');
+   background: url('./default_banner.jpg');
    background-position: center;
    background-size: cover;
    background-repeat: no-repeat;

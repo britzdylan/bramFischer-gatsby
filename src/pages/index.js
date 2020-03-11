@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import LayoutHome from '../components/layout-home'
 import indexStyles from '../components/index.module.css'
 import 'lazysizes' 
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const indexPage = () => {
     return (
@@ -38,7 +39,7 @@ const indexPage = () => {
                 <div className={indexStyles.lease}>
                     <div>
                     <h4 className="">Need to setup your store? Get in touch with us today!</h4>
-                    <Link to="/lease" className="btn btn-alt">Lease from us</Link>
+                    <AniLink paintDrip hex="#94DD83" to="/lease" className="btn btn-alt">Lease from us</AniLink>
                     </div>
                     <img className={indexStyles.ctaImage} data-src="../../cta.png" alt="" className="lazyload"/>
                 </div>

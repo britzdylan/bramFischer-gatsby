@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import headerStyles from './header-default.module.css'
+import TransitionLink from "gatsby-plugin-transition-link"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const activeStyles = {
     color: 'green',
@@ -20,16 +22,16 @@ const Header = (props) => { //main home page header
 
             {/* main navigation for desktops & tablets */}
             <nav className={headerStyles.nav} >
-                <Link to="/"><img src='../../bramfischer.svg' width="250px" alt="bramFischer Shopping Centre"/></Link>
+                <AniLink cover bg="#94DD83" to="/"><img src='../../bramfischer.svg' width="250px" alt="bramFischer Shopping Centre"/></AniLink>
                 <ul className={headerStyles.mainMenu}>
-                    <li>
-                        <Link to="/stores" activeStyle={activeStyles} >Store Directory</Link>
+                <li>
+                        <AniLink cover bg="#94DD83"  to="/stores" activeStyle={activeStyles} >Store Directory</AniLink >
                     </li>
                     <li>
-                        <Link to="/contact" activeStyle={activeStyles} >Contact Us</Link>
+                        <AniLink cover bg="#94DD83"  to="/contact" activeStyle={activeStyles} >Contact Us</AniLink>
                     </li>
                     <li>
-                        <Link to="/lease" activeStyle={activeStyles} >Lease from us</Link>
+                        <AniLink cover bg="#94DD83" to="/lease" activeStyle={activeStyles}  >Lease from us</AniLink >
                     </li>
                 </ul>
             </nav>

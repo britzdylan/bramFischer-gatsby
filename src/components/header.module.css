@@ -59,7 +59,7 @@ z-index: 5;
 
 .header {
     height: 50vh;
-    background: url('./circle-img.webp');
+    background: url('./circle-img.png');
     background-position-x: 110%;
     background-position-y: 100%;
     background-size: 700px;
@@ -114,7 +114,7 @@ z-index: 5;
     .header {
         
         height: 50%;
-        background: url('./default_banner.webp');
+        background: url('./default_banner.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -213,7 +213,7 @@ z-index: 5;
     .header {
         
             height: 20vh;
-            background: url('./default_banner.webp');
+            background: url('./default_banner.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             color: white;
@@ -302,7 +302,7 @@ z-index: 5;
 
     .header {
         height: 50%;
-        background: url('./circle-img.webp');
+        background: url('./circle-img.png');
         background-position-x: 110%;
         background-position-y: 100%;
         background-size: 350px;
@@ -346,7 +346,7 @@ z-index: 5;
 
     .header {
         height: 50%;
-        background: url('./circle-img.webp');
+        background: url('./circle-img.png');
         background-position-x: 110%;
         background-position-y: 100%;
         background-size: 500px;
@@ -379,7 +379,7 @@ z-index: 5;
 
     .header {
         height: 50%;
-        background: url('./circle-img.webp');
+        background: url('./circle-img.png');
         background-position-x: 110%;
         background-position-y: 100%;
         background-size: 600px;

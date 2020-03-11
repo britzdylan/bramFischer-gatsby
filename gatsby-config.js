@@ -6,10 +6,13 @@ module.exports = {
   siteMetadata: {
     title: 'bramFischer Shopping Centre',
     description: '',
-    author: 'Netwater Properties PTY (Ltd)'
+    author: 'Netwater Properties PTY (Ltd)',
+    siteUrl: `https://www.bramfischercentre.co.za`
   },
   plugins: [
     "gatsby-plugin-react-helmet",
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

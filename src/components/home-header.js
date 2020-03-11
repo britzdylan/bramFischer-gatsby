@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import headerStyles from './header.module.css'
+import TransitionLink from "gatsby-plugin-transition-link"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 
 
@@ -16,16 +18,16 @@ const Header = () => { //main home page header
 
             {/* main navigation for desktops & tablets */}
             <nav className={headerStyles.nav} >
-            <Link to="/"><img src='../../bramfischer.svg' width="250px" alt="bramFischer Centre"/></Link>
+            <AniLink  cover bg="#94DD83" to="/"><img src='../../bramfischer.svg' width="250px" alt="bramFischer Centre"/></AniLink>
                 <ul className={headerStyles.mainMenu}>
                     <li>
-                        <Link to="/stores" >Store Directory</Link>
+                        <AniLink cover bg="#94DD83"  to="/stores" >Store Directory</AniLink >
                     </li>
                     <li>
-                        <Link to="/contact" >Contact Us</Link>
+                        <AniLink cover  bg="#94DD83" to="/contact" >Contact Us</AniLink>
                     </li>
                     <li>
-                        <Link to="/lease" >Lease from us</Link>
+                        <AniLink cover  bg="#94DD83" to="/lease" >Lease from us</AniLink >
                     </li>
                 </ul>
             </nav>
@@ -35,7 +37,7 @@ const Header = () => { //main home page header
             <div className={headerStyles.header} >
                 
                 <h1 className="">Your one stop convenient shopping experience.</h1>
-                <Link to="/stores" className="btn">Browse our Stores</Link>
+                <AniLink paintDrip  hex="#94DD83" to="/stores" className="btn">Browse our Stores</AniLink>
 
             </div>
 
@@ -45,19 +47,19 @@ const Header = () => { //main home page header
                 <ul className={headerStyles.mobileMenu}>
                     <li>
                         
-                        <Link to="/stores" ><img src="../../cart.svg" alt="" className={headerStyles.mobileIcon} height="25px" width="25px"/>Stores</Link>
+                        <AniLink cover  bg="#94DD83" to="/stores" ><img src="../../cart.svg" alt="" className={headerStyles.mobileIcon} height="25px" width="25px"/>Stores</AniLink>
                     </li>
                     <li>
                         
-                        <Link to="/contact-us" ><img src="../../atm.svg" alt="" className={headerStyles.mobileIcon} height="25px" width="25px"/>Contact</Link>
+                        <AniLink cover  bg="#94DD83" to="/contact-us" ><img src="../../atm.svg" alt="" className={headerStyles.mobileIcon} height="25px" width="25px"/>Contact</AniLink>
                     </li>
                     <li>
                         
-                        <Link to="/lease" ><img src="../../parking.svg" alt="" className={headerStyles.mobileIcon} height="25px" width="25px" />Lease</Link>
+                        <AniLink cover  bg="#94DD83" to="/lease" ><img src="../../parking.svg" alt="" className={headerStyles.mobileIcon} height="25px" width="25px" />Lease</AniLink>
                     </li>
                     <li>
                         
-                        <Link to="" ><div className={headerStyles.circle}></div><div className={headerStyles.circle}></div><div className={headerStyles.circle}></div></Link>
+                        <AniLink cover  bg="#94DD83" to="" ><div className={headerStyles.circle}></div><div className={headerStyles.circle}></div><div className={headerStyles.circle}></div></AniLink>
                     </li>
                 </ul>
             </nav>

@@ -54,7 +54,7 @@ const stores = ({ data }) => {
               <div className={storesStyles.filterOptions} id="dropDown"  >
                 <ul className={storesStyles.filterList}>
                     {data.allStrapiCategorie.edges.map((cat, i) => (
-                            <li key={cat.node.strapiId} ><Link activeStyle={activeStyles} to={`./category/${cat.node.strapiId}`}>{cat.node.name}</Link>|</li>
+                            <li key={cat.node.strapiId} ><Link fade activeStyle={activeStyles} to={`./category/${cat.node.strapiId}`}>{cat.node.name}</Link>|</li>
                             ))
                         }
                 </ul>

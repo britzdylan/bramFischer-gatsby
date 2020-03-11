@@ -6,7 +6,6 @@ import Layout from '../components/layout-default'
 import storesStyles from '../components/storesStyles.module.css'
 import { IoMdClose } from "react-icons/io";
 
-
 const activeStyles = {
   fontSize: '700',
   color: 'green'
@@ -50,12 +49,12 @@ const Category = ({ data,props }) => {
               <main className="content" >
               <div className={storesStyles.filterContainer} >
                   <div className={storesStyles.filterSelector} id="filterSelector">
-                    <div className={storesStyles.activeFilter}><Link to="/stores"><IoMdClose className={storesStyles.filterIcon} /></Link><p>{data.strapiCategorie.name} Stores</p></div>
+                    <div className={storesStyles.activeFilter}><Link fade to="/stores"><IoMdClose className={storesStyles.filterIcon} /></Link><p>{data.strapiCategorie.name} Stores</p></div>
                   </div>
                   <div className={storesStyles.filterOptions} id="dropDown"  >
                     <ul className={storesStyles.filterList}>
                         {data.allStrapiCategorie.edges.map((cat, i) => (
-                                <li key={cat.node.strapiId} ><Link activeStyle={activeStyles} to={`./category/${cat.node.strapiId}`}>{cat.node.name}</Link>|</li>
+                                <li key={cat.node.strapiId} ><Link fade activeStyle={activeStyles} to={`./category/${cat.node.strapiId}`}>{cat.node.name}</Link>|</li>
                                 ))
                             }
                     </ul>  
