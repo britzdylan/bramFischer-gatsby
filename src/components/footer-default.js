@@ -20,7 +20,7 @@ const Footer = () => {
                 {/* contact us form */}
                 <div className={footerStyles.contactForm} id="contact-form">
                     <h3>Contact Us</h3>
-                    <form method="POST" data-netlify="true" name="contact" data-netlify-recaptcha="true" netlify-honeypot="bot-field">
+                    <form method="POST" data-netlify="true" name="contact" netlify-honeypot="bot-field">
                     <input type="hidden" name="form-name" value="contact" />
                         <label htmlFor="name">Name</label>
                         <input type="text" name="name" id="c-name" placeholder="John Doe" required/>
