@@ -92,21 +92,39 @@
 
 
 .filterSelector {
-    font-size: 700;
-    color: white;
-    background-color: #548F6C;
-    padding: 8px;
-    border-radius: 8px;
-    max-width: 350px;
-    max-height: 45px;
     margin-bottom: 16px;
 }
 
-.filterSelector > p {
-    line-height: 1;
-    margin: 0;
-    padding: 0;
-    
+
+.activeFilter {
+    width: fit-content;
+    height: 32px;
+    max-width: 300px;
+    padding: 4px 8px;
+    border-radius: 16px;
+    background-color: #94DD83;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.activeFilter > p {
+    color: white;
+    line-height: 1 ;
+}
+
+.filterIcon {
+    margin: 0 8px;
+    color: white;
+    transition: all 0.4s ease-in-out;
+    font-weight: 700;
+}
+
+.filterIcon:hover {
+    transform: scale(1.1);
+    color: black;
 }
 
 @media only screen and (max-width: 600px) {

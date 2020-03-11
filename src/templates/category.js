@@ -4,6 +4,7 @@ import Link from 'gatsby-link'
 import Image from 'gatsby-image'
 import Layout from '../components/layout-default'
 import storesStyles from '../components/storesStyles.module.css'
+import { IoMdClose } from "react-icons/io";
 
 
 const activeStyles = {
@@ -49,16 +50,15 @@ const Category = ({ data,props }) => {
               <main className="content" >
               <div className={storesStyles.filterContainer} >
                   <div className={storesStyles.filterSelector} id="filterSelector">
-                    <p>Filter stores:</p>
+                    <div className={storesStyles.activeFilter}><Link to="/stores"><IoMdClose className={storesStyles.filterIcon} /></Link><p>{data.strapiCategorie.name} Stores</p></div>
                   </div>
                   <div className={storesStyles.filterOptions} id="dropDown"  >
-                <ul className={storesStyles.filterList}>
-                    {data.allStrapiCategorie.edges.map((cat, i) => (
-                            <li key={cat.node.strapiId} ><Link activeStyle={activeStyles} to={`./category/${cat.node.strapiId}`}>{cat.node.name}</Link>|</li>
-                            ))
-                        }
-                </ul>
-                    <p>Viewing:{}</p>
+                    <ul className={storesStyles.filterList}>
+                        {data.allStrapiCategorie.edges.map((cat, i) => (
+                                <li key={cat.node.strapiId} ><Link activeStyle={activeStyles} to={`./category/${cat.node.strapiId}`}>{cat.node.name}</Link>|</li>
+                                ))
+                            }
+                    </ul>  
             </div>
               </div>
               <div className={storesStyles.listing}>

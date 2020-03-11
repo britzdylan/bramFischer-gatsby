@@ -48,8 +48,8 @@ const stores = ({ data }) => {
   
           <main className="content" >
           <div className={storesStyles.filterContainer} >
-              <div className={storesStyles.filterSelector} id="filterSelector" onClick={console.log('Hello')}>
-                <p>Filter stores:</p>
+              <div className={storesStyles.filterSelector} id="filterSelector">
+                <p className={storesStyles.activeFilter}>All Stores</p>
               </div>
               <div className={storesStyles.filterOptions} id="dropDown"  >
                 <ul className={storesStyles.filterList}>
@@ -58,7 +58,7 @@ const stores = ({ data }) => {
                             ))
                         }
                 </ul>
-                    <p>Viewing:{}</p>
+                    
             </div>
           </div>
           <div className={storesStyles.listing}>

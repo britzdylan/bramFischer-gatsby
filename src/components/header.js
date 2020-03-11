@@ -20,7 +20,7 @@ const Header = (props) => { //main home page header
 
             {/* main navigation for desktops & tablets */}
             <nav className={headerStyles.nav} >
-                <Link to="/"><img src='../../bramfischer.svg' width="250px" /></Link>
+                <Link to="/"><img src='../../bramfischer.svg' width="250px" alt="bramFischer Shopping Centre"/></Link>
                 <ul className={headerStyles.mainMenu}>
                     <li>
                         <Link to="/stores" activeStyle={activeStyles} >Store Directory</Link>
