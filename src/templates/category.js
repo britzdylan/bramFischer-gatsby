@@ -48,12 +48,12 @@ const Category = ({ data,props }) => {
               <main className="content" >
               <div className={storesStyles.filterContainer} >
                   <div className={storesStyles.filterSelector} id="filterSelector">
-                    <div className={storesStyles.activeFilter}><AniLink fade to="/stores"><IoMdClose className={storesStyles.filterIcon} /></AniLink><p>{data.strapiCategorie.name} Stores</p></div>
+                    <div className={storesStyles.activeFilter}><AniLink paintDrip hex="#94DD83" duration={0.7}    to="/stores"><IoMdClose className={storesStyles.filterIcon} /></AniLink><p>{data.strapiCategorie.name} Stores</p></div>
                   </div>
                   <div className={storesStyles.filterOptions} id="dropDown"  >
                     <ul className={storesStyles.filterList}>
                         {data.allStrapiCategorie.edges.map((cat, i) => (
-                                <li key={cat.node.strapiId} ><AniLink fade activeStyle={activeStyles} to={`./category/${cat.node.strapiId}`}>{cat.node.name}</AniLink>|</li>
+                                <li key={cat.node.strapiId} ><AniLink fade duration={0.4}  activeStyle={activeStyles} to={`/category/${cat.node.strapiId}`}>{cat.node.name}</AniLink>|</li>
                                 ))
                             }
                     </ul>  
