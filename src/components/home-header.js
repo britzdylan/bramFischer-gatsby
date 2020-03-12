@@ -9,21 +9,18 @@ class Header extends React.Component { //main home page header
     
     componentDidMount() {
         function myFunction() {
-            if (window.pageYOffset >= sticky) {
+            if (window.pageYOffset >= 300) {
               navBar.classList.add("sticky")
-              Header.classList.add('padding')
               Brand.classList.add('size')
             } else {
               navBar.classList.remove("sticky");
-              Header.classList.remove('padding')
               Brand.classList.remove('size')
             }
           }
         window.onscroll = function() {myFunction()};
         const navBar = document.getElementById('nav');
-        const Header = document.getElementById('header');
         const Brand = document.getElementById('brand');
-        const sticky = navBar.offsetTop;
+
     }
     
         
@@ -38,6 +35,23 @@ class Header extends React.Component { //main home page header
             </div>
 
             {/* main navigation for desktops & tablets */}
+            <nav className={headerStyles.nav} >
+            <AniLink  cover bg="#94DD83" to="/"><img id="brand" src='../../bramfischer.svg' width="250px" alt="bramFischer Centre"/></AniLink>
+                <ul className={headerStyles.mainMenu}>
+                    <li>
+                        <AniLink cover bg="#94DD83"  to="/stores" >Store Directory</AniLink >
+                    </li>
+                    <li>
+                        <AniLink cover  bg="#94DD83" to="/contact" >Contact Us</AniLink>
+                    </li>
+                    <li>
+                        <AniLink cover  bg="#94DD83" to="/lease" >Lease from us</AniLink >
+                    </li>
+                </ul>
+            </nav>
+
+            {/* sticky nav */}
+
             <nav className={headerStyles.nav} id="nav" >
             <AniLink  cover bg="#94DD83" to="/"><img id="brand" src='../../bramfischer.svg' width="250px" alt="bramFischer Centre"/></AniLink>
                 <ul className={headerStyles.mainMenu}>
