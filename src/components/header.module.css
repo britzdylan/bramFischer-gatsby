@@ -116,7 +116,7 @@
    
     
     .header {
-        
+        margin-top: 60px;
         height: 50%;
         background: url('./default_banner.jpg');
         background-repeat: no-repeat;
