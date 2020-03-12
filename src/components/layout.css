@@ -23,6 +23,7 @@ body {
   font-weight: 400;
   line-height: 1.4;
   color: #333;
+  transition: all 0.2s ease-out;
 }
 
 p {margin-bottom: 1.15rem;}
@@ -156,6 +157,11 @@ input[type="submit"]:hover {
     body {
         margin-bottom: 60px;
     }
+    .sticky {
+
+        height: auto;
+
+      }
     
 
 
@@ -165,12 +171,21 @@ input[type="submit"]:hover {
     body {
         margin-bottom: 60px;
     }
+
+    .sticky {
+
+        height: auto;
+
+      }
 }
 
 @media only screen and (min-width: 768px) {
    body {
-       margin: 0;
+       margin-bottom: 0;
    }
+   .sticky {
+    height: auto;
+  }
 
 }
 
@@ -190,5 +205,21 @@ input[type="submit"]:hover {
 }
 
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    transition: all 0.5s ease-in;
+    background-color: #f2f2f2;
+  }
 
+  .padding {
+    margin-top: 0px;
+    transition: all 0.1s ease-in;
+  }
 
+  .size {
+      height: 45px;
+      transition: all 1s ease-in;
+  }

@@ -8,9 +8,38 @@ const activeStyles = {
 }
 
 
-const Header = (props) => { //main home page header 
-    return (
-        <header> 
+
+class Header extends React.Component { //main home page header 
+    
+constructor(props) {
+    super(props);
+    this.state = {props};
+  }
+
+componentDidMount() {
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navBar.classList.add("sticky")
+          Header.classList.add('padding')
+          Brand.classList.add('size')
+        } else {
+          navBar.classList.remove("sticky");
+          Header.classList.remove('padding')
+          Brand.classList.remove('size')
+        }
+      }
+    window.onscroll = function() {myFunction()};
+    const navBar = document.getElementById('nav');
+    const Header = document.getElementById('header');
+    const Brand = document.getElementById('brand');
+    const sticky = navBar.offsetTop;
+}
+
+
+
+    
+    render() {
+       return ( <header> 
 
             {/* top bar with contact information */}
             <div className={headerStyles.top} > 
@@ -19,8 +48,8 @@ const Header = (props) => { //main home page header
             </div>
 
             {/* main navigation for desktops & tablets */}
-            <nav className={headerStyles.nav} >
-                <AniLink cover bg="#94DD83" to="/"><img src='../../bramfischer.svg' width="250px" alt="bramFischer Shopping Centre"/></AniLink>
+            <nav className={headerStyles.nav} id="nav">
+                <AniLink cover bg="#94DD83" to="/"><img id='brand' src='../../bramfischer.svg' width="250px" alt="bramFischer Shopping Centre"/></AniLink>
                 <ul className={headerStyles.mainMenu}>
                 <li>
                         <AniLink cover bg="#94DD83"  to="/stores" activeStyle={activeStyles} >Store Directory</AniLink >
@@ -36,8 +65,8 @@ const Header = (props) => { //main home page header
 
             {/* Page header */}
 
-            <div className={headerStyles.header} >
-                <h1 className="wht">{props.name}</h1>
+            <div className={headerStyles.header} id="header">
+                <h1 className="wht">{this.props.name}</h1>
             </div>
 
 
@@ -63,7 +92,8 @@ const Header = (props) => { //main home page header
                 </ul>
             </nav>
         </header>
-    )
+       )
+    }
 }
 
 export default Header

@@ -19,13 +19,16 @@
 
 .nav {
     background-color: white;
-    height: 100px;
+    height: auto;
     max-height: 100px;
     padding: 0 10%;
     -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
--moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
-z-index: 5;
+    -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
+    z-index: 5;
+    transition: all 0.5s ease-in-out;
+    position: fixed;
+    width: 100%;
 }
 
 .mainMenu {
@@ -70,6 +73,7 @@ z-index: 5;
     align-items: center; */
     padding: 120px 10% 0 20%;
     overflow: visible;
+    margin-top: 60px;
 }
 
 .header > h1 {
@@ -147,6 +151,7 @@ z-index: 5;
         height: auto;
         padding: 16px 10%;
         text-align: center;
+        position: fixed;
     }
 
     .mobileMenu {
@@ -374,7 +379,6 @@ z-index: 5;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        z-index: 2;
     }
 
     .header {

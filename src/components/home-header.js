@@ -4,7 +4,30 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 
 
-const Header = () => { //main home page header 
+class Header extends React.Component { //main home page header 
+
+    
+    componentDidMount() {
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+              navBar.classList.add("sticky")
+              Header.classList.add('padding')
+              Brand.classList.add('size')
+            } else {
+              navBar.classList.remove("sticky");
+              Header.classList.remove('padding')
+              Brand.classList.remove('size')
+            }
+          }
+        window.onscroll = function() {myFunction()};
+        const navBar = document.getElementById('nav');
+        const Header = document.getElementById('header');
+        const Brand = document.getElementById('brand');
+        const sticky = navBar.offsetTop;
+    }
+    
+        
+        render() {
     return (
         <header> 
 
@@ -15,8 +38,8 @@ const Header = () => { //main home page header
             </div>
 
             {/* main navigation for desktops & tablets */}
-            <nav className={headerStyles.nav} >
-            <AniLink  cover bg="#94DD83" to="/"><img src='../../bramfischer.svg' width="250px" alt="bramFischer Centre"/></AniLink>
+            <nav className={headerStyles.nav} id="nav" >
+            <AniLink  cover bg="#94DD83" to="/"><img id="brand" src='../../bramfischer.svg' width="250px" alt="bramFischer Centre"/></AniLink>
                 <ul className={headerStyles.mainMenu}>
                     <li>
                         <AniLink cover bg="#94DD83"  to="/stores" >Store Directory</AniLink >
@@ -32,7 +55,7 @@ const Header = () => { //main home page header
             
             {/* Page header */}
 
-            <div className={headerStyles.header} >
+            <div className={headerStyles.header} id="header" >
                 
                 <h1 className="">Your one stop convenient shopping experience.</h1>
                 <AniLink paintDrip  hex="#94DD83" to="/stores" className="btn">Browse our Stores</AniLink>
@@ -63,6 +86,7 @@ const Header = () => { //main home page header
             </nav>
         </header>
     )
+}
 }
 
 export default Header
