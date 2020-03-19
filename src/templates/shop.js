@@ -109,8 +109,7 @@ const shop = ({ data }) => {
                                         </div>
                             </div>
                                         <div className={shopStyles.additional}>
-                                            <h4>Additional Information</h4>
-                                            <p>Download our Menu</p>
+                                            <h4>Additional Information</h4>                                          
                                             <Link className='btn'>Download</Link>
                                         </div>
                     </div>
@@ -121,11 +120,12 @@ const shop = ({ data }) => {
                         <article>{shop.description}</article>
                     </div>
                     <div className={shopStyles.media}>
-                        {shop.media.map((data, i) => (
-                            <div className={shopStyles.gridItem} key={data.id} >
-                                <img data-src={data.url ? data.url : ''} className="lazyload"  alt={data.name} width="100%"/>
-                            </div>
-                        ))}
+                        {
+                                shop.media.map((data, i) => (
+                                <div className={shopStyles.gridItem} key={data.id} >
+                                    <img data-src={data.url} className="lazyload"  alt={data.name} max-height="250px" max-width="250px" />
+                                </div>                                  
+                         ))}
                         
                     </div>
                 </main>
