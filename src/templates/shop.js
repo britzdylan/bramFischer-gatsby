@@ -108,10 +108,7 @@ const shop = ({ data }) => {
                                             <hr/>
                                         </div>
                             </div>
-                                        <div className={shopStyles.additional}>
-                                            <h4>Additional Information</h4>                                          
-                                            <Link className='btn'>Download</Link>
-                                        </div>
+                                        
                     </div>
                 </aside>
                 <main className={shopStyles.main}>
