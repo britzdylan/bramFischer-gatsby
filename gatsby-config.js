@@ -5,14 +5,22 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: 'bramFischer Shopping Centre',
-    description: '',
+    description: 'Your one stop convenient shopping experience in Randburg',
     author: 'Netwater Properties PTY (Ltd)',
-    siteUrl: `https://www.bramfischercentre.co.za`
+    url: `https://www.bramfischercentre.co.za`,
+    image: "/seo.jpg"
   },
   plugins: [
     "gatsby-plugin-react-helmet",
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-transition-link`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+        trackingId: "UA-114869782-3",
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
