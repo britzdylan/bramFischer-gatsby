@@ -7,7 +7,7 @@ module.exports = {
     title: 'bramFischer Shopping Centre',
     description: 'Your one stop convenient shopping experience in Randburg',
     author: 'Netwater Properties PTY (Ltd)',
-    url: `https://www.bramfischercentre.co.za`,
+    siteUrl: `https://www.bramfischercentre.co.za`,
     image: "/seo.jpg"
   },
   plugins: [
