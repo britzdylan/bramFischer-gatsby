@@ -55,7 +55,7 @@ hr {
     max-width: 250px; 
     border-radius: 8px;
     overflow: hidden;
-    margin: 8px 0;
+    margin: 8px;
 }
 
 .gridItem > img {
@@ -117,7 +117,7 @@ overflow: visible;}
 
     .media {
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-start;
         flex-wrap: wrap;
         align-items: flex-start;
         margin: 64px 0 0 0;
@@ -183,7 +183,7 @@ overflow: visible;}
         display: flex;
         
         flex-wrap: no-wrap;
-        align-items: space-evenly;
+        align-items: flex-start;
         margin: 120px 0 0 0;
         
     }
